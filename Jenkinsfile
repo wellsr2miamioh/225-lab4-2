@@ -47,6 +47,16 @@ pipeline {
                 }
             }
         }
+
+        // Added stage for generating test data
+        stage('Generate Test Data') {
+            steps {
+                script {
+                    // Run the python script to generate data to add to the database
+                    sh "python data-gen.py"
+                }
+            }
+        }
         
         stage('Check Kubernetes Cluster') {
             steps {
