@@ -49,7 +49,7 @@ pipeline {
         }
 
         // Added stage for generating test data
-        stage('Generate Test Data') {
+        stage('Generate and Add Test Data') {
             steps {
                 script {
                     // Run the python script to generate data to add to the database
@@ -57,7 +57,16 @@ pipeline {
                 }
             }
         }
-        
+
+        stage('Remove Test Data') {
+            steps {
+                script {
+                    // Run the python script to generate data to add to the database
+                    sh "python data-clear.py"
+                }
+            }
+        }
+         
         stage('Check Kubernetes Cluster') {
             steps {
                 script {
