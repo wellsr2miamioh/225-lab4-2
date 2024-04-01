@@ -21,8 +21,7 @@ class TestH5Tag(unittest.TestCase):
         for i in range(10):
             test_name = f'Test Name {i}'
             assert test_name in browser.page_source, f"Test contact {test_name} not found in page source"
-
-print("Test completed successfully. All 10 test contacts were verified.")
+        print("Test completed successfully. All 10 test contacts were verified.")
 
     def tearDown(self):
         self.driver.quit()
