@@ -31,7 +31,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flask-deployment
+  name: flask-prod-deployment
   labels:
     app: flask
 spec:
@@ -60,7 +60,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: flask-service
+  name: flask-prod-service
 spec:
   type: LoadBalancer 
   loadBalancerIP: 10.48.10.116                                     
