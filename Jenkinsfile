@@ -52,7 +52,7 @@ pipeline {
             steps {
                 script {
                     // Run the python script to generate data to add to the database
-                    sh "python data-clear.py"
+                    sh "python3 data-gen.py"
                 }
             }
         }
@@ -72,7 +72,7 @@ pipeline {
             steps {
                 script {
                     // Run the python script to generate data to add to the database
-                    sh "python data-clear.py"
+                    sh "python3 data-clear.py"
                 }
             }
         }
