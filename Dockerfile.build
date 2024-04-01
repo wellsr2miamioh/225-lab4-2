@@ -18,4 +18,4 @@ RUN pip install -r requirements1.txt
 EXPOSE 5000
 
 # Command to run the application
-CMD ["python3 main.py"] && [python3 data-gen.py"]
+CMD ["python3", "main.py"] && [python3", "data-gen.py"]
