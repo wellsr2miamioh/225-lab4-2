@@ -53,7 +53,7 @@ pipeline {
             steps {
                 script {
                     // Run the python script to generate data to add to the database
-                    sh "python data-gen.py"
+                    sh "python3 data-gen.py"
                 }
             }
         }
