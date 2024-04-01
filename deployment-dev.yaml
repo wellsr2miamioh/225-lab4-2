@@ -33,16 +33,16 @@ kind: Deployment
 metadata:
   name: flask-dev-deployment
   labels:
-    app: flask
+    app: flask-dev
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: flask
+      app: flask-dev
   template:
     metadata:
       labels:
-        app: flask
+        app: flask-dev
     spec:
       containers:
         - name: flask
@@ -67,4 +67,4 @@ spec:
     port: 80
     targetPort: 5000
   selector:
-    app: flask
+    app: flask-dev
