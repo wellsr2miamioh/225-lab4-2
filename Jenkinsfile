@@ -52,8 +52,8 @@ stage('Generate Test Data') {
     steps {
         script {
             // Adjust the label selector to match your actual pod's labels
-            def appPod = sh(script: "kubectl get pods -l app=my-app-label -o jsonpath='{.items[0].metadata.name}'", returnStdout: true).trim()
-            sh "kubectl exec ${appPod} --container my-app-container -- python3 data-gen.py"
+            def appPod = sh(script: "kubectl get pods -l app=flask-app -o jsonpath='{.items[0].metadata.name}'", returnStdout: true).trim()
+            sh "kubectl exec ${appPod} --container flask-deployment -- python3 data-gen.py"
         }
     }
 }
