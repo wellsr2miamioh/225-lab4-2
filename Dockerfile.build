@@ -12,7 +12,7 @@ COPY /data/demo.db /nfs
 COPY . .
 
 # Install Python dependencies
-RUN pip install -r requirements.txt
+RUN pip install -r requirements1.txt
 
 # Expose port 5000 for the application
 EXPOSE 5000
