@@ -7,13 +7,14 @@ def connect_db():
     """Connect to the SQLite database."""
     return sqlite3.connect(DATABASE)
 
-def clear_contacts():
-    """Clear all entries in the contacts table."""
+def clear_test_contacts():
+    """Clear only the test contacts from the database."""
     db = connect_db()
-    db.execute('DELETE FROM contacts')
+    # Assuming all test contacts follow a specific naming pattern
+    db.execute("DELETE FROM contacts WHERE name LIKE 'Test Name %'")
     db.commit()
-    print('All contacts have been deleted from the database.')
+    print('Test contacts have been deleted from the database.')
     db.close()
 
 if __name__ == '__main__':
-    clear_contacts()
+    clear_test_contacts()
