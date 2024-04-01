@@ -20,7 +20,7 @@ class TestH5Tag(unittest.TestCase):
         # Check for the presence of all 10 test contacts
         for i in range(1):
             test_name = f'Test Name {i}'
-            assert test_name in firefox.page_source, f"Test contact {test_name} not found in page source"
+            assert test_name in driver.page_source, f"Test contact {test_name} not found in page source"
         print("Test completed successfully. All 10 test contacts were verified.")
 
     def tearDown(self):
