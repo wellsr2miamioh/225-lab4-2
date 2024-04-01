@@ -48,6 +48,15 @@ pipeline {
             }
         }
 
+        stage('Generate Test Data') {
+            steps {
+                script {
+                    // Run the python script to generate data to add to the database
+                    sh "python data-clear.py"
+                }
+            }
+        }
+        
         stage("Run Acceptance Tests") {
             steps {
                 script {
@@ -59,14 +68,14 @@ pipeline {
             }
         }
         
-//        stage('Remove Test Data') {
-//            steps {
-//                script {
+        stage('Remove Test Data') {
+            steps {
+                script {
                     // Run the python script to generate data to add to the database
-//                    sh "python data-clear.py"
-//                }
-//            }
-//        }
+                    sh "python data-clear.py"
+                }
+            }
+        }
          
         stage('Check Kubernetes Cluster') {
             steps {
