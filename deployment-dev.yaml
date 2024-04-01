@@ -45,7 +45,7 @@ spec:
         app: flask
     spec:
       containers:
-        - name: flask
+        - name: flask-dev
           image: cithit/roseaw:latest
           ports:
             - containerPort: 5000
