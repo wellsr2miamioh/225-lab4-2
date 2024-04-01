@@ -68,7 +68,8 @@ spec:
     targetPort: 5000
   selector:
     app: flask
-    ---
+
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
