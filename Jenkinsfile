@@ -49,14 +49,14 @@ pipeline {
         }
 
         // Added stage for generating test data
-        stage('Generate and Add Test Data') {
-            steps {
-                script {
+//        stage('Generate and Add Test Data') {
+//            steps {
+//                script {
                     // Run the python script to generate data to add to the database
-                    sh "python3 data-gen.py"
-                }
-            }
-        }
+//                    sh "python3 data-gen.py"
+//                }
+//            }
+//        }
 
         stage("Run Acceptance Tests") {
             steps {
