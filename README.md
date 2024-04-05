@@ -5,9 +5,6 @@ This is an extension of the persistent flask/sqlite3 app and adds in generated d
 1) Create a new blank repository in your GitHub account using the lab name above.
 2) Copy the URL of this repository and paste it into your repository.
 3) View each file, and make changes where it is commented.
-4) Run your pipeline.
-5) Start your screencapture. Demonstrate your changes to the code in your video, and show the resulting web page.
-6) Add 5 elements to the database.
-7) Delete the pod in Rancher.
-8) Refresh the web page.
-9) Talk about what happened to your data.
+4) Start your screencapture. Demonstrate your changes to the code in your video, and show the resulting web page.
+6) Run your pipeline.
+7) Refresh your web page during the test cycle.Talk about what happened to the data.
