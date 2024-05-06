@@ -27,7 +27,7 @@ spec:
   selector:
     matchLabels:
       type: nfs
----      
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -51,11 +51,17 @@ spec:
             - containerPort: 5000
           volumeMounts:
             - name: nfs-storage
-              mountPath: /nfs       
+              mountPath: /nfs
+            - name: docker-creds
+              mountPath: /root/.docker
+              readOnly: true
       volumes:
         - name: nfs-storage
           persistentVolumeClaim:
-            claimName: flask-pvc    
+            claimName: flask-pvc
+        - name: docker-creds
+          secret:
+            secretName: docker-creds
 ---
 apiVersion: v1
 kind: Service
