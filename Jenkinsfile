@@ -2,7 +2,7 @@ pipeline {
     agent any 
 
     environment {
-        DOCKER_CREDENTIALS_ID = 'roseaw-dockerhub'  
+        DOCKER_CREDENTIALS_ID = 'cithit-dockerhub'  
         DOCKER_IMAGE = 'cithit/roseaw'                                   //<-----change this to your MiamiID!
         IMAGE_TAG = "build-${BUILD_NUMBER}"
         GITHUB_URL = 'https://github.com/miamioh-cit/225-lab4-2.git'     //<-----change this to match this new repository!
