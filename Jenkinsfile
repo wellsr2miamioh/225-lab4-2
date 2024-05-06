@@ -55,7 +55,7 @@ pipeline {
                 def appPod = sh(script: "kubectl get pods -l app=flask -o jsonpath='{.items[0].metadata.name}'", returnStdout: true).trim()
                 // Execute command within the pod. 
                 sh "kubectl get pods"
-                sh "sleep 5"
+                sh "sleep 15"
                 sh "kubectl exec ${appPod} -- python3 data-gen.py"
                 }
             }
