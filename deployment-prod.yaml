@@ -10,7 +10,7 @@ spec:
   accessModes:
     - ReadWriteMany
   nfs:
-    path:  /srv/nfs/roseaw         #local reference
+    path:  /srv/nfs/wellsr2        #local reference
     server: 10.48.10.140
   persistentVolumeReclaimPolicy: Retain
 ---
@@ -63,7 +63,7 @@ metadata:
   name: flask-prod-service
 spec:
   type: LoadBalancer 
-  loadBalancerIP: 10.48.10.116                                     
+  loadBalancerIP: 10.48.10.179                                     
   ports:
   - protocol: TCP
     port: 80
